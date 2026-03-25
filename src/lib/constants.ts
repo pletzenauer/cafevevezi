@@ -62,14 +62,15 @@ export const MENU_ITEMS = {
       ],
     },
     {
-      name: "Zákusky",
+      name: "Zákusky & jídlo",
       icon: "🍰",
       items: [
-        { name: "Cheesecake", desc: "Domácí krémový cheesecake" },
-        { name: "Tiramisu", desc: "Klasické italské tiramisu" },
-        { name: "Větrník", desc: "Tradiční český větrník" },
-        { name: "Brownies", desc: "Čokoládové brownies" },
-        { name: "Sezónní dort", desc: "Dle aktuální nabídky" },
+        { name: "Cheesecake", desc: "Domácí krémový, i bezlepková varianta" },
+        { name: "Pavlova", desc: "Křehká pusinková s čerstvým ovocem" },
+        { name: "Čokoládové tartaletky", desc: "S bílou čokoládou a ovocem" },
+        { name: "Mousse dezerty", desc: "Ořechový, čokoládový a další" },
+        { name: "Bruschetta", desc: "S prosciuttem, rukolou a parmezánem" },
+        { name: "Sezónní nabídka", desc: "Dle aktuální inspirace" },
       ],
     },
   ],
@@ -119,18 +120,19 @@ export const CONTACT = {
 };
 
 export const IMAGES = {
-  hero: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1920&q=80",
-  about: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
-  events: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80",
+  hero: "/images/hero.jpg",
+  about: "/images/about.jpg",
+  events: "/images/events.jpg",
+  logo: "/images/logo-source.jpg",
   gallery: [
-    "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80",
-    "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
-    "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80",
-    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
-    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
-    "https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=600&q=80",
-    "https://images.unsplash.com/photo-1525610553eeb-1e671310ef46?w=600&q=80",
-    "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80",
+    "/images/gallery-1.jpg",
+    "/images/gallery-2.jpg",
+    "/images/gallery-3.jpg",
+    "/images/gallery-4.jpg",
+    "/images/gallery-5.jpg",
+    "/images/gallery-6.jpg",
+    "/images/gallery-7.jpg",
+    "/images/gallery-8.jpg",
   ],
 };
 
