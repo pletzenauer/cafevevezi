@@ -1,0 +1,15 @@
+services:
+  cafevevezi:
+    build: .
+    container_name: cafevevezi
+    restart: unless-stopped
+    ports:
+      - "3466:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - caddy_network
+
+networks:
+  caddy_network:
+    external: true
