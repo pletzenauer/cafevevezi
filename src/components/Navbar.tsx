@@ -49,31 +49,29 @@ export default function Navbar() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            {/* Castle gate logo SVG */}
+            {/* Castle gate logo SVG — matching original brand mark */}
             <svg
-              width="28"
-              height="32"
-              viewBox="0 0 28 32"
+              width="30"
+              height="34"
+              viewBox="0 0 30 34"
               fill="none"
               className="text-accent"
               aria-hidden="true"
             >
               {/* Three merlons (battlements) */}
-              <rect x="2" y="0" width="4" height="6" fill="currentColor" />
-              <rect x="12" y="0" width="4" height="6" fill="currentColor" />
-              <rect x="22" y="0" width="4" height="6" fill="currentColor" />
-              {/* Connecting bar */}
-              <rect x="2" y="6" width="24" height="3" fill="currentColor" />
+              <rect x="1" y="0" width="5" height="8" fill="currentColor" />
+              <rect x="12.5" y="0" width="5" height="8" fill="currentColor" />
+              <rect x="24" y="0" width="5" height="8" fill="currentColor" />
+              {/* Top connecting bar */}
+              <rect x="1" y="8" width="28" height="3.5" fill="currentColor" />
               {/* Left pillar */}
-              <rect x="3" y="9" width="4" height="18" fill="currentColor" />
+              <rect x="2" y="11.5" width="5" height="22.5" fill="currentColor" />
               {/* Right pillar */}
-              <rect x="21" y="9" width="4" height="18" fill="currentColor" />
-              {/* Center vertical */}
-              <rect x="12" y="9" width="4" height="12" fill="currentColor" />
-              {/* Cross bar */}
-              <rect x="7" y="14" width="14" height="3" fill="currentColor" />
-              {/* Base */}
-              <rect x="2" y="27" width="24" height="3" fill="currentColor" />
+              <rect x="23" y="11.5" width="5" height="22.5" fill="currentColor" />
+              {/* Center pillar (shorter — stops at crossbar) */}
+              <rect x="12.5" y="11.5" width="5" height="11" fill="currentColor" />
+              {/* Horizontal crossbar */}
+              <rect x="7" y="18" width="16" height="3.5" fill="currentColor" />
             </svg>
             {CAFE_INFO.name}
           </a>
