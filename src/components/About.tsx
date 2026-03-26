@@ -63,7 +63,7 @@ export default function About() {
                   key={feature.label}
                   className="flex items-center gap-3 px-5 py-3 bg-bg-card border border-border rounded-sm"
                 >
-                  <span className="text-xl">{feature.icon}</span>
+                  <span className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
                   <div>
                     <div className="text-sm font-medium text-text">
                       {feature.label}

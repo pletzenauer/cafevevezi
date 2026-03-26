@@ -49,24 +49,31 @@ export default function Navbar() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            {/* Tower logo SVG */}
+            {/* Castle gate logo SVG */}
             <svg
-              width="20"
-              height="28"
-              viewBox="0 0 20 28"
+              width="28"
+              height="32"
+              viewBox="0 0 28 32"
               fill="none"
               className="text-accent"
               aria-hidden="true"
             >
-              <rect x="7" y="0" width="6" height="4" fill="currentColor" />
-              <rect x="9" y="4" width="2" height="3" fill="currentColor" />
-              <rect x="4" y="7" width="12" height="2" fill="currentColor" />
-              <rect x="5" y="9" width="10" height="15" fill="currentColor" />
-              <rect x="7" y="12" width="2" height="3" fill="currentColor" opacity="0.4" />
-              <rect x="11" y="12" width="2" height="3" fill="currentColor" opacity="0.4" />
-              <rect x="8" y="19" width="4" height="5" fill="currentColor" opacity="0.4" />
-              <rect x="3" y="24" width="14" height="2" fill="currentColor" />
-              <rect x="1" y="26" width="18" height="2" fill="currentColor" />
+              {/* Three merlons (battlements) */}
+              <rect x="2" y="0" width="4" height="6" fill="currentColor" />
+              <rect x="12" y="0" width="4" height="6" fill="currentColor" />
+              <rect x="22" y="0" width="4" height="6" fill="currentColor" />
+              {/* Connecting bar */}
+              <rect x="2" y="6" width="24" height="3" fill="currentColor" />
+              {/* Left pillar */}
+              <rect x="3" y="9" width="4" height="18" fill="currentColor" />
+              {/* Right pillar */}
+              <rect x="21" y="9" width="4" height="18" fill="currentColor" />
+              {/* Center vertical */}
+              <rect x="12" y="9" width="4" height="12" fill="currentColor" />
+              {/* Cross bar */}
+              <rect x="7" y="14" width="14" height="3" fill="currentColor" />
+              {/* Base */}
+              <rect x="2" y="27" width="24" height="3" fill="currentColor" />
             </svg>
             {CAFE_INFO.name}
           </a>

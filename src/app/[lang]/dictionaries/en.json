@@ -26,9 +26,9 @@
       "We prepare specialty coffee from carefully selected roasters, homemade desserts, and offer a space for gathering, culture, and relaxation. Come sit with us — whether alone with a book or with friends."
     ],
     "features": [
-      { "icon": "☕", "label": "Takeaway", "desc": "Coffee prepared to go" },
-      { "icon": "🌿", "label": "Terrace", "desc": "Outdoor seating in summer" },
-      { "icon": "📅", "label": "Reservations", "desc": "Book your table in advance" }
+      { "label": "Takeaway", "desc": "Coffee prepared to go" },
+      { "label": "Terrace", "desc": "Outdoor seating in summer" },
+      { "label": "Reservations", "desc": "Book your table in advance" }
     ]
   },
   "menu": {
@@ -39,7 +39,7 @@
     "categories": [
       {
         "name": "Coffee",
-        "icon": "☕",
+
         "items": [
           { "name": "Espresso", "desc": "Classic Italian espresso" },
           { "name": "Cappuccino", "desc": "Espresso with frothed milk" },
@@ -51,7 +51,7 @@
       },
       {
         "name": "Drinks",
-        "icon": "🍵",
+
         "items": [
           { "name": "Homemade lemonade", "desc": "Fresh seasonal lemonade" },
           { "name": "Tea", "desc": "Selection of quality loose-leaf teas" },
@@ -62,7 +62,7 @@
       },
       {
         "name": "Desserts & food",
-        "icon": "🍰",
+
         "items": [
           { "name": "Cheesecake", "desc": "Homemade creamy, also gluten-free" },
           { "name": "Pavlova", "desc": "Delicate meringue with fresh fruit" },

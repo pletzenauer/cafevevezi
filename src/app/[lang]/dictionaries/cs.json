@@ -26,9 +26,9 @@
       "Připravujeme výběrovou kávu z pečlivě vybraných pražíren, domácí zákusky a nabízíme prostor pro setkávání, kulturu i odpočinek. Přijďte si k nám posedět — ať už sami s knihou, nebo s přáteli."
     ],
     "features": [
-      { "icon": "☕", "label": "S sebou", "desc": "Kávu připravíme i na cestu" },
-      { "icon": "🌿", "label": "Zahrádka", "desc": "Posezení venku v létě" },
-      { "icon": "📅", "label": "Rezervace", "desc": "Rezervujte si místo předem" }
+      { "label": "S sebou", "desc": "Kávu připravíme i na cestu" },
+      { "label": "Zahrádka", "desc": "Posezení venku v létě" },
+      { "label": "Rezervace", "desc": "Rezervujte si místo předem" }
     ]
   },
   "menu": {
@@ -39,7 +39,6 @@
     "categories": [
       {
         "name": "Kávy",
-        "icon": "☕",
         "items": [
           { "name": "Espresso", "desc": "Klasické italské espresso" },
           { "name": "Cappuccino", "desc": "Espresso s napěněným mlékem" },
@@ -51,7 +50,6 @@
       },
       {
         "name": "Nápoje",
-        "icon": "🍵",
         "items": [
           { "name": "Domácí limonáda", "desc": "Čerstvá sezónní limonáda" },
           { "name": "Čaj", "desc": "Výběr kvalitních sypaných čajů" },
@@ -62,7 +60,6 @@
       },
       {
         "name": "Zákusky & jídlo",
-        "icon": "🍰",
         "items": [
           { "name": "Cheesecake", "desc": "Domácí krémový, i bezlepková varianta" },
           { "name": "Pavlova", "desc": "Křehká pusinková s čerstvým ovocem" },

@@ -37,12 +37,9 @@ export default function Events() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl">🎬</span>
-              <h3 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light">
-                {dict.events.kinedok.title}
-              </h3>
-            </div>
+            <h3 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light mb-6">
+              {dict.events.kinedok.title}
+            </h3>
             <p className="text-text-muted font-light leading-relaxed mb-6 text-base md:text-lg">
               {dict.events.kinedok.description}
             </p>
@@ -78,12 +75,9 @@ export default function Events() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="text-3xl">🎉</span>
-                <h3 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light">
-                  {dict.events.privateEvents.title}
-                </h3>
-              </div>
+              <h3 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light mb-6">
+                {dict.events.privateEvents.title}
+              </h3>
               <p className="text-text-muted font-light leading-relaxed text-base md:text-lg">
                 {dict.events.privateEvents.description}
               </p>

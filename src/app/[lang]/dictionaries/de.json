@@ -26,9 +26,9 @@
       "Wir bereiten Spezialitätenkaffee aus sorgfältig ausgewählten Röstereien zu, bieten hausgemachte Desserts und einen Raum für Begegnungen, Kultur und Entspannung. Kommen Sie zu uns — ob allein mit einem Buch oder mit Freunden."
     ],
     "features": [
-      { "icon": "☕", "label": "Zum Mitnehmen", "desc": "Kaffee auch zum Mitnehmen" },
-      { "icon": "🌿", "label": "Terrasse", "desc": "Draußen sitzen im Sommer" },
-      { "icon": "📅", "label": "Reservierung", "desc": "Reservieren Sie Ihren Tisch" }
+      { "label": "Zum Mitnehmen", "desc": "Kaffee auch zum Mitnehmen" },
+      { "label": "Terrasse", "desc": "Draußen sitzen im Sommer" },
+      { "label": "Reservierung", "desc": "Reservieren Sie Ihren Tisch" }
     ]
   },
   "menu": {
@@ -39,7 +39,7 @@
     "categories": [
       {
         "name": "Kaffee",
-        "icon": "☕",
+
         "items": [
           { "name": "Espresso", "desc": "Klassischer italienischer Espresso" },
           { "name": "Cappuccino", "desc": "Espresso mit aufgeschäumter Milch" },
@@ -51,7 +51,7 @@
       },
       {
         "name": "Getränke",
-        "icon": "🍵",
+
         "items": [
           { "name": "Hausgemachte Limonade", "desc": "Frische saisonale Limonade" },
           { "name": "Tee", "desc": "Auswahl hochwertiger loser Tees" },
@@ -62,7 +62,7 @@
       },
       {
         "name": "Desserts & Speisen",
-        "icon": "🍰",
+
         "items": [
           { "name": "Cheesecake", "desc": "Hausgemacht, auch glutenfrei" },
           { "name": "Pavlova", "desc": "Zartes Baiser mit frischem Obst" },

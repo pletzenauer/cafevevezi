@@ -43,7 +43,6 @@ export default function Menu() {
               }}
               className="group bg-bg-card border border-border p-8 hover:border-accent/30 transition-all duration-500"
             >
-              <div className="text-4xl mb-4">{category.icon}</div>
               <h3 className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl font-light mb-6 text-text group-hover:text-accent transition-colors">
                 {category.name}
               </h3>

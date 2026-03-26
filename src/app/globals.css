@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #0a0a08;
-  --color-bg-light: #161614;
-  --color-bg-card: #1e1e1b;
-  --color-bg-card-hover: #2a2a26;
-  --color-accent: #c8956c;
-  --color-accent-light: #dab08a;
-  --color-accent-dark: #a87550;
+  --color-bg: #121220;
+  --color-bg-light: #1a1a2e;
+  --color-bg-card: #22223a;
+  --color-bg-card-hover: #2c2c48;
+  --color-accent: #c8a84e;
+  --color-accent-light: #dbc06a;
+  --color-accent-dark: #a88e3a;
   --color-text: #f0ece6;
-  --color-text-muted: #9a948a;
-  --color-text-dim: #6a645c;
-  --color-border: #2a2824;
-  --color-border-light: #3a3834;
+  --color-text-muted: #9a96a0;
+  --color-text-dim: #6a6678;
+  --color-border: #2a2a42;
+  --color-border-light: #3a3a56;
 
   --font-serif: "Cormorant Garamond", "Georgia", serif;
   --font-body: "Outfit", "system-ui", sans-serif;
@@ -75,6 +75,6 @@ body {
 
 /* Ambient glow effect */
 .glow-accent {
-  box-shadow: 0 0 60px rgba(200, 149, 108, 0.15),
-    0 0 120px rgba(200, 149, 108, 0.05);
+  box-shadow: 0 0 60px rgba(200, 168, 78, 0.15),
+    0 0 120px rgba(200, 168, 78, 0.05);
 }
