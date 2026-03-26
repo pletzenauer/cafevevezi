@@ -4,8 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { CAFE_INFO, IMAGES } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function Hero() {
+  const dict = useDictionary();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -20,7 +22,7 @@ export default function Hero() {
       <motion.div style={{ y }} className="absolute inset-0 scale-110">
         <Image
           src={IMAGES.hero}
-          alt="Café Ve Věži interiér"
+          alt={dict.hero.imageAlt}
           fill
           className="object-cover"
           priority
@@ -69,7 +71,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="text-lg md:text-xl font-light tracking-[0.3em] uppercase text-text-muted"
         >
-          {CAFE_INFO.tagline}
+          {dict.hero.tagline}
         </motion.p>
 
         {/* CTAs */}
@@ -80,16 +82,16 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 mt-12"
         >
           <a
-            href="#nabidka"
+            href={dict.hero.ctaMenuHref}
             className="px-8 py-3.5 bg-accent text-bg text-sm font-medium tracking-widest uppercase hover:bg-accent-light transition-colors duration-300"
           >
-            Prozkoumat nabídku
+            {dict.hero.ctaMenu}
           </a>
           <a
-            href="#kontakt"
+            href={dict.hero.ctaReserveHref}
             className="px-8 py-3.5 border border-text/30 text-text text-sm font-medium tracking-widest uppercase hover:border-accent hover:text-accent transition-colors duration-300"
           >
-            Rezervace
+            {dict.hero.ctaReserve}
           </a>
         </motion.div>
 

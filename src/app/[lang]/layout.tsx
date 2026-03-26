@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import { locales, type Locale } from "@/lib/i18n";
+import { getDictionary } from "./dictionaries";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -16,30 +18,43 @@ const outfit = Outfit({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Café Ve Věži | Kavárna v Tachově",
-  description:
-    "Útulná kavárna v historickém centru Tachova. Výběrová káva, domácí zákusky, kulturní akce a soukromé oslavy. Navštivte nás na K. H. Borovského 128.",
-  keywords: [
-    "kavárna",
-    "Tachov",
-    "káva",
-    "zákusky",
-    "café",
-    "KineDok",
-    "soukromé akce",
-  ],
-  openGraph: {
-    title: "Café Ve Věži",
-    description:
-      "Útulná kavárna v historickém centru Tachova. Výběrová káva, domácí zákusky, kulturní akce.",
-    url: "https://cafevevezi.cz",
-    siteName: "Café Ve Věži",
-    locale: "cs_CZ",
-    type: "website",
-  },
+const localeMap: Record<Locale, string> = {
+  cs: "cs_CZ",
+  en: "en_US",
+  de: "de_DE",
 };
 
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  if (!locales.includes(lang as Locale)) {
+    return {};
+  }
+  const dict = await getDictionary(lang as Locale);
+
+  return {
+    title: dict.meta.title,
+    description: dict.meta.description,
+    keywords: dict.meta.keywords,
+    openGraph: {
+      title: "Café Ve Věži",
+      description: dict.meta.ogDescription,
+      url: "https://cafevevezi.cz",
+      siteName: "Café Ve Věži",
+      locale: localeMap[lang as Locale],
+      type: "website",
+    },
+  };
+}
+
+// JSON-LD structured data (static, trusted content only)
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
@@ -63,14 +78,18 @@ const jsonLd = JSON.stringify({
   ],
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+
   return (
     <html
-      lang="cs"
+      lang={lang}
       className={`${cormorant.variable} ${outfit.variable} antialiased`}
     >
       <head>

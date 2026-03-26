@@ -4,14 +4,16 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import { GALLERY, IMAGES, CAFE_INFO } from "@/lib/constants";
+import { IMAGES, CAFE_INFO } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function Gallery() {
+  const dict = useDictionary();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
-    <section id="galerie" className="relative py-24 md:py-36 bg-bg-light">
+    <section id={dict.gallery.sectionId} className="relative py-24 md:py-36 bg-bg-light">
       <div className="absolute inset-0 noise-overlay" />
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
         {/* Header */}
@@ -22,10 +24,10 @@ export default function Gallery() {
           className="text-center mb-16"
         >
           <span className="text-accent text-sm tracking-[0.3em] uppercase font-light">
-            Nahlédněte k nám
+            {dict.gallery.subtitle}
           </span>
           <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl font-light mt-4">
-            {GALLERY.heading}
+            {dict.gallery.heading}
           </h2>
           <div className="w-16 h-px bg-accent mx-auto mt-6" />
         </motion.div>
@@ -43,7 +45,7 @@ export default function Gallery() {
             >
               <Image
                 src={src}
-                alt={`Café Ve Věži ${i + 1}`}
+                alt={`${dict.gallery.imageAlt} ${i + 1}`}
                 width={600}
                 height={i % 3 === 0 ? 750 : i % 3 === 1 ? 450 : 600}
                 className="w-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -62,7 +64,7 @@ export default function Gallery() {
           className="text-center mt-16"
         >
           <p className="text-text-muted font-light mb-4">
-            {GALLERY.instagramCta}
+            {dict.gallery.instagramCta}
           </p>
           <a
             href={CAFE_INFO.instagram}
@@ -105,7 +107,7 @@ export default function Gallery() {
             >
               <Image
                 src={lightbox}
-                alt="Galerie"
+                alt={dict.gallery.heading}
                 width={1200}
                 height={800}
                 className="w-full h-auto max-h-[85vh] object-contain"
@@ -114,7 +116,7 @@ export default function Gallery() {
             <button
               onClick={() => setLightbox(null)}
               className="absolute top-6 right-6 text-white/60 hover:text-white text-3xl"
-              aria-label="Zavřít"
+              aria-label={dict.gallery.lightboxClose}
             >
               ✕
             </button>

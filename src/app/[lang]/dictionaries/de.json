@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "links": [
+      { "label": "Über uns", "href": "#ueber-uns" },
+      { "label": "Speisekarte", "href": "#speisekarte" },
+      { "label": "Veranstaltungen", "href": "#veranstaltungen" },
+      { "label": "Galerie", "href": "#galerie" },
+      { "label": "Kontakt", "href": "#kontakt" }
+    ]
+  },
+  "hero": {
+    "imageAlt": "Café Ve Věži Außenansicht",
+    "tagline": "EIN CAFÉ IM HERZEN VON TACHOV",
+    "ctaMenu": "Speisekarte entdecken",
+    "ctaMenuHref": "#speisekarte",
+    "ctaReserve": "Reservierung",
+    "ctaReserveHref": "#kontakt"
+  },
+  "about": {
+    "sectionId": "ueber-uns",
+    "subtitle": "Unsere Geschichte",
+    "heading": "Über uns",
+    "imageAlt": "Café Ve Věži Innenraum",
+    "paragraphs": [
+      "Café Ve Věži ist ein gemütliches Café im historischen Zentrum von Tachov. Unsere Räumlichkeiten atmen Geschichte und bieten eine einzigartige Atmosphäre, in der Tradition auf modernes Cafékultur-Verständnis trifft.",
+      "Wir bereiten Spezialitätenkaffee aus sorgfältig ausgewählten Röstereien zu, bieten hausgemachte Desserts und einen Raum für Begegnungen, Kultur und Entspannung. Kommen Sie zu uns — ob allein mit einem Buch oder mit Freunden."
+    ],
+    "features": [
+      { "icon": "☕", "label": "Zum Mitnehmen", "desc": "Kaffee auch zum Mitnehmen" },
+      { "icon": "🌿", "label": "Terrasse", "desc": "Draußen sitzen im Sommer" },
+      { "icon": "📅", "label": "Reservierung", "desc": "Reservieren Sie Ihren Tisch" }
+    ]
+  },
+  "menu": {
+    "sectionId": "speisekarte",
+    "subtitle": "Was wir anbieten",
+    "heading": "Speisekarte",
+    "description": "Unser Angebot wechselt saisonal",
+    "categories": [
+      {
+        "name": "Kaffee",
+        "icon": "☕",
+        "items": [
+          { "name": "Espresso", "desc": "Klassischer italienischer Espresso" },
+          { "name": "Cappuccino", "desc": "Espresso mit aufgeschäumter Milch" },
+          { "name": "Latte", "desc": "Sanfter Kaffee mit Milch" },
+          { "name": "Filterkaffee", "desc": "Pour-over aus Spezialitätenbohnen" },
+          { "name": "Flat White", "desc": "Doppelter Espresso mit Mikroschaum" },
+          { "name": "Wiener Kaffee", "desc": "Kaffee mit Schlagsahne" }
+        ]
+      },
+      {
+        "name": "Getränke",
+        "icon": "🍵",
+        "items": [
+          { "name": "Hausgemachte Limonade", "desc": "Frische saisonale Limonade" },
+          { "name": "Tee", "desc": "Auswahl hochwertiger loser Tees" },
+          { "name": "Heiße Schokolade", "desc": "Echte belgische Schokolade" },
+          { "name": "Matcha Latte", "desc": "Japanischer Grüntee mit Milch" },
+          { "name": "Frischer Saft", "desc": "Frisch gepresster Saft" }
+        ]
+      },
+      {
+        "name": "Desserts & Speisen",
+        "icon": "🍰",
+        "items": [
+          { "name": "Cheesecake", "desc": "Hausgemacht, auch glutenfrei" },
+          { "name": "Pavlova", "desc": "Zartes Baiser mit frischem Obst" },
+          { "name": "Schokoladen-Tartelettes", "desc": "Mit weißer Schokolade und Obst" },
+          { "name": "Mousse-Desserts", "desc": "Nuss, Schokolade und mehr" },
+          { "name": "Bruschetta", "desc": "Mit Prosciutto, Rucola und Parmesan" },
+          { "name": "Saisonale Spezialitäten", "desc": "Nach aktueller Inspiration" }
+        ]
+      }
+    ]
+  },
+  "events": {
+    "sectionId": "veranstaltungen",
+    "subtitle": "Erlebnisse",
+    "heading": "Veranstaltungen",
+    "imageAlt": "Filmvorführung im Café",
+    "kinedok": {
+      "title": "KineDok — Dokumentarfilmkino",
+      "description": "Wir zeigen regelmäßig Dokumentarfilme in Zusammenarbeit mit dem Projekt KineDok. Entdecken Sie Geschichten aus aller Welt in der intimen Atmosphäre unseres Cafés.",
+      "cta": "Folgen Sie uns in den sozialen Medien für das aktuelle Programm"
+    },
+    "privateEvents": {
+      "title": "Private Veranstaltungen",
+      "description": "Suchen Sie einen Ort für eine Feier, ein Firmentreffen oder einen Workshop? Wir bieten Räumlichkeiten für bis zu 15 Personen mit kompletter technischer Ausstattung.",
+      "features": [
+        "Kapazität bis 15 Personen",
+        "Videoprojektor mit Leinwand",
+        "Soundanlage",
+        "Catering nach Wunsch"
+      ],
+      "cta": "Schreiben Sie uns für ein unverbindliches Angebot",
+      "ctaHref": "#kontakt"
+    }
+  },
+  "gallery": {
+    "sectionId": "galerie",
+    "subtitle": "Ein Blick zu uns",
+    "heading": "Galerie",
+    "imageAlt": "Café Ve Věži",
+    "instagramCta": "Folgen Sie uns auf Instagram",
+    "lightboxClose": "Schließen"
+  },
+  "contact": {
+    "sectionId": "kontakt",
+    "subtitle": "So finden Sie uns",
+    "heading": "Kontakt",
+    "addressLabel": "Adresse",
+    "emailLabel": "E-Mail",
+    "socialLabel": "Soziale Netzwerke",
+    "hoursLabel": "Öffnungszeiten",
+    "mapTitle": "Karte — Café Ve Věži",
+    "formLabels": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Absenden"
+    },
+    "openingHours": [
+      { "day": "Montag", "hours": "Geschlossen", "closed": true },
+      { "day": "Dienstag – Freitag", "hours": "9:00 – 18:00", "closed": false },
+      { "day": "Samstag", "hours": "9:00 – 17:00", "closed": false },
+      { "day": "Sonntag", "hours": "10:00 – 16:00", "closed": false }
+    ]
+  },
+  "footer": {
+    "tagline": "Mit Liebe in Tachov gemacht",
+    "copy": "Café Ve Věži. Alle Rechte vorbehalten."
+  },
+  "emailButton": {
+    "ariaLabel": "Schreiben Sie uns",
+    "subject": "Reservierung"
+  },
+  "meta": {
+    "title": "Café Ve Věži | Café in Tachov",
+    "description": "Ein gemütliches Café im historischen Zentrum von Tachov. Spezialitätenkaffee, hausgemachte Desserts, Kulturveranstaltungen und private Feiern. Besuchen Sie uns in der K. H. Borovského 128.",
+    "keywords": ["Café", "Tachov", "Kaffee", "Desserts", "KineDok", "Veranstaltungen", "Tschechien"],
+    "ogDescription": "Ein gemütliches Café im historischen Zentrum von Tachov. Spezialitätenkaffee, hausgemachte Desserts und Kulturveranstaltungen."
+  }
+}

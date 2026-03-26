@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { CAFE_INFO, CONTACT } from "@/lib/constants";
+import { CAFE_INFO } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function Contact() {
+  const dict = useDictionary();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
 
   return (
-    <section id="kontakt" className="relative py-24 md:py-36">
+    <section id={dict.contact.sectionId} className="relative py-24 md:py-36">
       <div className="absolute inset-0 noise-overlay" />
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
         {/* Header */}
@@ -19,10 +21,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <span className="text-accent text-sm tracking-[0.3em] uppercase font-light">
-            Najdete nás
+            {dict.contact.subtitle}
           </span>
           <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl font-light mt-4">
-            {CONTACT.heading}
+            {dict.contact.heading}
           </h2>
           <div className="w-16 h-px bg-accent mx-auto mt-6" />
         </motion.div>
@@ -37,7 +39,7 @@ export default function Contact() {
             {/* Address */}
             <div className="mb-10">
               <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-light mb-4 text-accent">
-                Adresa
+                {dict.contact.addressLabel}
               </h3>
               <p className="text-text-muted font-light leading-relaxed">
                 {CAFE_INFO.address}
@@ -49,7 +51,7 @@ export default function Contact() {
             {/* Email */}
             <div className="mb-10">
               <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-light mb-4 text-accent">
-                E-mail
+                {dict.contact.emailLabel}
               </h3>
               <a
                 href={`mailto:${CAFE_INFO.email}`}
@@ -62,7 +64,7 @@ export default function Contact() {
             {/* Social */}
             <div className="mb-10">
               <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-light mb-4 text-accent">
-                Sociální sítě
+                {dict.contact.socialLabel}
               </h3>
               <div className="flex gap-6">
                 <a
@@ -87,20 +89,16 @@ export default function Contact() {
             {/* Opening hours */}
             <div>
               <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-light mb-4 text-accent">
-                Otevírací doba
+                {dict.contact.hoursLabel}
               </h3>
               <div className="space-y-2">
-                {CONTACT.openingHours.map((row) => (
+                {dict.contact.openingHours.map((row) => (
                   <div
                     key={row.day}
                     className="flex justify-between max-w-xs text-text-muted font-light"
                   >
                     <span>{row.day}</span>
-                    <span
-                      className={
-                        row.hours === "Zavřeno" ? "text-text-dim" : ""
-                      }
-                    >
+                    <span className={row.closed ? "text-text-dim" : ""}>
                       {row.hours}
                     </span>
                   </div>
@@ -124,7 +122,7 @@ export default function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Mapa — Café Ve Věži"
+                title={dict.contact.mapTitle}
               />
             </div>
 
@@ -135,7 +133,7 @@ export default function Contact() {
             >
               <div>
                 <label className="text-sm text-text-muted font-light tracking-wide block mb-2">
-                  {CONTACT.formLabels.name}
+                  {dict.contact.formLabels.name}
                 </label>
                 <input
                   type="text"
@@ -144,7 +142,7 @@ export default function Contact() {
               </div>
               <div>
                 <label className="text-sm text-text-muted font-light tracking-wide block mb-2">
-                  {CONTACT.formLabels.email}
+                  {dict.contact.formLabels.email}
                 </label>
                 <input
                   type="email"
@@ -153,7 +151,7 @@ export default function Contact() {
               </div>
               <div>
                 <label className="text-sm text-text-muted font-light tracking-wide block mb-2">
-                  {CONTACT.formLabels.message}
+                  {dict.contact.formLabels.message}
                 </label>
                 <textarea
                   rows={4}
@@ -164,7 +162,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full px-8 py-3.5 bg-accent text-bg text-sm font-medium tracking-widest uppercase hover:bg-accent-light transition-colors duration-300"
               >
-                {CONTACT.formLabels.send}
+                {dict.contact.formLabels.send}
               </button>
             </form>
           </motion.div>

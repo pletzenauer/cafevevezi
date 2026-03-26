@@ -1,6 +1,11 @@
-import { CAFE_INFO, FOOTER, NAV_LINKS } from "@/lib/constants";
+"use client";
+
+import { CAFE_INFO } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function Footer() {
+  const dict = useDictionary();
+
   return (
     <footer className="border-t border-border py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -10,12 +15,12 @@ export default function Footer() {
             <span className="font-[family-name:var(--font-cormorant)] text-2xl font-light text-text">
               {CAFE_INFO.name}
             </span>
-            <p className="text-text-dim text-xs mt-1">{FOOTER.tagline}</p>
+            <p className="text-text-dim text-xs mt-1">{dict.footer.tagline}</p>
           </div>
 
           {/* Nav links */}
           <nav className="flex flex-wrap justify-center gap-6">
-            {NAV_LINKS.map((link) => (
+            {dict.nav.links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -70,7 +75,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-border text-center">
-          <p className="text-text-dim text-xs">{FOOTER.copy}</p>
+          <p className="text-text-dim text-xs">
+            &copy; {new Date().getFullYear()} {dict.footer.copy}
+          </p>
         </div>
       </div>
     </footer>

@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import { EVENTS, IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function Events() {
+  const dict = useDictionary();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
 
   return (
-    <section id="akce" className="relative py-24 md:py-36 overflow-hidden">
+    <section id={dict.events.sectionId} className="relative py-24 md:py-36 overflow-hidden">
       <div className="absolute inset-0 noise-overlay" />
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
         {/* Header */}
@@ -20,10 +22,10 @@ export default function Events() {
           className="text-center mb-20"
         >
           <span className="text-accent text-sm tracking-[0.3em] uppercase font-light">
-            Zážitky
+            {dict.events.subtitle}
           </span>
           <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl font-light mt-4">
-            {EVENTS.heading}
+            {dict.events.heading}
           </h2>
           <div className="w-16 h-px bg-accent mx-auto mt-6" />
         </motion.div>
@@ -38,14 +40,14 @@ export default function Events() {
             <div className="flex items-center gap-3 mb-6">
               <span className="text-3xl">🎬</span>
               <h3 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light">
-                {EVENTS.kinedok.title}
+                {dict.events.kinedok.title}
               </h3>
             </div>
             <p className="text-text-muted font-light leading-relaxed mb-6 text-base md:text-lg">
-              {EVENTS.kinedok.description}
+              {dict.events.kinedok.description}
             </p>
             <p className="text-accent text-sm tracking-wide">
-              {EVENTS.kinedok.cta}
+              {dict.events.kinedok.cta}
             </p>
           </motion.div>
 
@@ -57,7 +59,7 @@ export default function Events() {
           >
             <Image
               src={IMAGES.events}
-              alt="Promítání v kavárně"
+              alt={dict.events.imageAlt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -79,17 +81,17 @@ export default function Events() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-3xl">🎉</span>
                 <h3 className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl font-light">
-                  {EVENTS.privateEvents.title}
+                  {dict.events.privateEvents.title}
                 </h3>
               </div>
               <p className="text-text-muted font-light leading-relaxed text-base md:text-lg">
-                {EVENTS.privateEvents.description}
+                {dict.events.privateEvents.description}
               </p>
             </div>
 
             <div>
               <ul className="space-y-4 mb-8">
-                {EVENTS.privateEvents.features.map((feature) => (
+                {dict.events.privateEvents.features.map((feature) => (
                   <li
                     key={feature}
                     className="flex items-center gap-3 text-text font-light"
@@ -100,10 +102,10 @@ export default function Events() {
                 ))}
               </ul>
               <a
-                href="#kontakt"
+                href={dict.events.privateEvents.ctaHref}
                 className="inline-block px-8 py-3.5 bg-accent text-bg text-sm font-medium tracking-widest uppercase hover:bg-accent-light transition-colors duration-300"
               >
-                {EVENTS.privateEvents.cta}
+                {dict.events.privateEvents.cta}
               </a>
             </div>
           </div>

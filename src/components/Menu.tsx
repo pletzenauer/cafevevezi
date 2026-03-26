@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { MENU_ITEMS } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function Menu() {
+  const dict = useDictionary();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="nabidka" className="relative py-24 md:py-36 bg-bg-light">
+    <section id={dict.menu.sectionId} className="relative py-24 md:py-36 bg-bg-light">
       <div className="absolute inset-0 noise-overlay" />
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
         {/* Header */}
@@ -19,18 +20,18 @@ export default function Menu() {
           className="text-center mb-16"
         >
           <span className="text-accent text-sm tracking-[0.3em] uppercase font-light">
-            Co u nás najdete
+            {dict.menu.subtitle}
           </span>
           <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl font-light mt-4 mb-6">
-            {MENU_ITEMS.heading}
+            {dict.menu.heading}
           </h2>
           <div className="w-16 h-px bg-accent mx-auto mb-4" />
-          <p className="text-text-muted font-light">{MENU_ITEMS.subtitle}</p>
+          <p className="text-text-muted font-light">{dict.menu.description}</p>
         </motion.div>
 
         {/* Category cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {MENU_ITEMS.categories.map((category, catIdx) => (
+          {dict.menu.categories.map((category, catIdx) => (
             <motion.div
               key={category.name}
               initial={{ opacity: 0, y: 40 }}

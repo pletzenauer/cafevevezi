@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "links": [
+      { "label": "O nás", "href": "#o-nas" },
+      { "label": "Nabídka", "href": "#nabidka" },
+      { "label": "Akce", "href": "#akce" },
+      { "label": "Galerie", "href": "#galerie" },
+      { "label": "Kontakt", "href": "#kontakt" }
+    ]
+  },
+  "hero": {
+    "imageAlt": "Café Ve Věži exteriér",
+    "tagline": "KAVÁRNA V SRDCI TACHOVA",
+    "ctaMenu": "Prozkoumat nabídku",
+    "ctaMenuHref": "#nabidka",
+    "ctaReserve": "Rezervace",
+    "ctaReserveHref": "#kontakt"
+  },
+  "about": {
+    "sectionId": "o-nas",
+    "subtitle": "Náš příběh",
+    "heading": "O nás",
+    "imageAlt": "Café Ve Věži interiér",
+    "paragraphs": [
+      "Café Ve Věži je útulná kavárna ukrytá v historickém centru Tachova. Naše prostory dýchají historií a nabízejí jedinečnou atmosféru, kde se tradice snoubí s moderním pojetím kavárenské kultury.",
+      "Připravujeme výběrovou kávu z pečlivě vybraných pražíren, domácí zákusky a nabízíme prostor pro setkávání, kulturu i odpočinek. Přijďte si k nám posedět — ať už sami s knihou, nebo s přáteli."
+    ],
+    "features": [
+      { "icon": "☕", "label": "S sebou", "desc": "Kávu připravíme i na cestu" },
+      { "icon": "🌿", "label": "Zahrádka", "desc": "Posezení venku v létě" },
+      { "icon": "📅", "label": "Rezervace", "desc": "Rezervujte si místo předem" }
+    ]
+  },
+  "menu": {
+    "sectionId": "nabidka",
+    "subtitle": "Co u nás najdete",
+    "heading": "Nabídka",
+    "description": "Aktuální nabídka se mění podle sezóny",
+    "categories": [
+      {
+        "name": "Kávy",
+        "icon": "☕",
+        "items": [
+          { "name": "Espresso", "desc": "Klasické italské espresso" },
+          { "name": "Cappuccino", "desc": "Espresso s napěněným mlékem" },
+          { "name": "Latte", "desc": "Jemná káva s mlékem" },
+          { "name": "Filtrovaná káva", "desc": "Pour-over z výběrových zrn" },
+          { "name": "Flat White", "desc": "Dvojité espresso s mikropěnou" },
+          { "name": "Vídeňská káva", "desc": "Káva se šlehačkou" }
+        ]
+      },
+      {
+        "name": "Nápoje",
+        "icon": "🍵",
+        "items": [
+          { "name": "Domácí limonáda", "desc": "Čerstvá sezónní limonáda" },
+          { "name": "Čaj", "desc": "Výběr kvalitních sypaných čajů" },
+          { "name": "Horká čokoláda", "desc": "Pravá belgická čokoláda" },
+          { "name": "Matcha Latte", "desc": "Japonský zelený čaj s mlékem" },
+          { "name": "Fresh džus", "desc": "Čerstvě lisovaná šťáva" }
+        ]
+      },
+      {
+        "name": "Zákusky & jídlo",
+        "icon": "🍰",
+        "items": [
+          { "name": "Cheesecake", "desc": "Domácí krémový, i bezlepková varianta" },
+          { "name": "Pavlova", "desc": "Křehká pusinková s čerstvým ovocem" },
+          { "name": "Čokoládové tartaletky", "desc": "S bílou čokoládou a ovocem" },
+          { "name": "Mousse dezerty", "desc": "Ořechový, čokoládový a další" },
+          { "name": "Bruschetta", "desc": "S prosciuttem, rukolou a parmezánem" },
+          { "name": "Sezónní nabídka", "desc": "Dle aktuální inspirace" }
+        ]
+      }
+    ]
+  },
+  "events": {
+    "sectionId": "akce",
+    "subtitle": "Zážitky",
+    "heading": "Akce",
+    "imageAlt": "Promítání v kavárně",
+    "kinedok": {
+      "title": "KineDok — dokumentární kino",
+      "description": "Pravidelně promítáme dokumentární filmy ve spolupráci s projektem KineDok. Přijďte objevovat příběhy z celého světa v komorní atmosféře naší kavárny.",
+      "cta": "Sledujte nás na sociálních sítích pro aktuální program"
+    },
+    "privateEvents": {
+      "title": "Soukromé akce",
+      "description": "Hledáte místo pro oslavu, firemní setkání nebo workshop? Nabízíme prostory až pro 15 osob s kompletním technickým vybavením.",
+      "features": [
+        "Kapacita až 15 osob",
+        "Videoprojektor s plátnem",
+        "Zvuková aparatura",
+        "Catering na míru"
+      ],
+      "cta": "Napište nám pro nezávaznou nabídku",
+      "ctaHref": "#kontakt"
+    }
+  },
+  "gallery": {
+    "sectionId": "galerie",
+    "subtitle": "Nahlédněte k nám",
+    "heading": "Galerie",
+    "imageAlt": "Café Ve Věži",
+    "instagramCta": "Sledujte nás na Instagramu",
+    "lightboxClose": "Zavřít"
+  },
+  "contact": {
+    "sectionId": "kontakt",
+    "subtitle": "Najdete nás",
+    "heading": "Kontakt",
+    "addressLabel": "Adresa",
+    "emailLabel": "E-mail",
+    "socialLabel": "Sociální sítě",
+    "hoursLabel": "Otevírací doba",
+    "mapTitle": "Mapa — Café Ve Věži",
+    "formLabels": {
+      "name": "Jméno",
+      "email": "E-mail",
+      "message": "Zpráva",
+      "send": "Odeslat"
+    },
+    "openingHours": [
+      { "day": "Pondělí", "hours": "Zavřeno", "closed": true },
+      { "day": "Úterý – Pátek", "hours": "9:00 – 18:00", "closed": false },
+      { "day": "Sobota", "hours": "9:00 – 17:00", "closed": false },
+      { "day": "Neděle", "hours": "10:00 – 16:00", "closed": false }
+    ]
+  },
+  "footer": {
+    "tagline": "Vytvořeno s láskou v Tachově",
+    "copy": "Café Ve Věži. Všechna práva vyhrazena."
+  },
+  "emailButton": {
+    "ariaLabel": "Napište nám",
+    "subject": "Rezervace"
+  },
+  "meta": {
+    "title": "Café Ve Věži | Kavárna v Tachově",
+    "description": "Útulná kavárna v historickém centru Tachova. Výběrová káva, domácí zákusky, kulturní akce a soukromé oslavy. Navštivte nás na K. H. Borovského 128.",
+    "keywords": ["kavárna", "Tachov", "káva", "zákusky", "café", "KineDok", "soukromé akce"],
+    "ogDescription": "Útulná kavárna v historickém centru Tachova. Výběrová káva, domácí zákusky, kulturní akce."
+  }
+}

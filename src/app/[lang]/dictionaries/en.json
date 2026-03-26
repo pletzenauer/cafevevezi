@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "links": [
+      { "label": "About", "href": "#about" },
+      { "label": "Menu", "href": "#menu" },
+      { "label": "Events", "href": "#events" },
+      { "label": "Gallery", "href": "#gallery" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "imageAlt": "Café Ve Věži exterior",
+    "tagline": "A CAFÉ IN THE HEART OF TACHOV",
+    "ctaMenu": "Explore the menu",
+    "ctaMenuHref": "#menu",
+    "ctaReserve": "Reservation",
+    "ctaReserveHref": "#contact"
+  },
+  "about": {
+    "sectionId": "about",
+    "subtitle": "Our story",
+    "heading": "About us",
+    "imageAlt": "Café Ve Věži interior",
+    "paragraphs": [
+      "Café Ve Věži is a cozy café hidden in the historic centre of Tachov. Our space breathes history and offers a unique atmosphere where tradition meets a modern take on café culture.",
+      "We prepare specialty coffee from carefully selected roasters, homemade desserts, and offer a space for gathering, culture, and relaxation. Come sit with us — whether alone with a book or with friends."
+    ],
+    "features": [
+      { "icon": "☕", "label": "Takeaway", "desc": "Coffee prepared to go" },
+      { "icon": "🌿", "label": "Terrace", "desc": "Outdoor seating in summer" },
+      { "icon": "📅", "label": "Reservations", "desc": "Book your table in advance" }
+    ]
+  },
+  "menu": {
+    "sectionId": "menu",
+    "subtitle": "What we offer",
+    "heading": "Menu",
+    "description": "Our menu changes with the seasons",
+    "categories": [
+      {
+        "name": "Coffee",
+        "icon": "☕",
+        "items": [
+          { "name": "Espresso", "desc": "Classic Italian espresso" },
+          { "name": "Cappuccino", "desc": "Espresso with frothed milk" },
+          { "name": "Latte", "desc": "Smooth coffee with milk" },
+          { "name": "Filter coffee", "desc": "Pour-over from specialty beans" },
+          { "name": "Flat White", "desc": "Double espresso with microfoam" },
+          { "name": "Viennese coffee", "desc": "Coffee with whipped cream" }
+        ]
+      },
+      {
+        "name": "Drinks",
+        "icon": "🍵",
+        "items": [
+          { "name": "Homemade lemonade", "desc": "Fresh seasonal lemonade" },
+          { "name": "Tea", "desc": "Selection of quality loose-leaf teas" },
+          { "name": "Hot chocolate", "desc": "Real Belgian chocolate" },
+          { "name": "Matcha Latte", "desc": "Japanese green tea with milk" },
+          { "name": "Fresh juice", "desc": "Freshly squeezed juice" }
+        ]
+      },
+      {
+        "name": "Desserts & food",
+        "icon": "🍰",
+        "items": [
+          { "name": "Cheesecake", "desc": "Homemade creamy, also gluten-free" },
+          { "name": "Pavlova", "desc": "Delicate meringue with fresh fruit" },
+          { "name": "Chocolate tartlets", "desc": "With white chocolate and fruit" },
+          { "name": "Mousse desserts", "desc": "Nut, chocolate, and more" },
+          { "name": "Bruschetta", "desc": "With prosciutto, arugula, and parmesan" },
+          { "name": "Seasonal specials", "desc": "Based on current inspiration" }
+        ]
+      }
+    ]
+  },
+  "events": {
+    "sectionId": "events",
+    "subtitle": "Experiences",
+    "heading": "Events",
+    "imageAlt": "Screening at the café",
+    "kinedok": {
+      "title": "KineDok — documentary cinema",
+      "description": "We regularly screen documentary films in collaboration with the KineDok project. Come discover stories from around the world in the intimate atmosphere of our café.",
+      "cta": "Follow us on social media for the current programme"
+    },
+    "privateEvents": {
+      "title": "Private events",
+      "description": "Looking for a place for a celebration, corporate meeting, or workshop? We offer space for up to 15 people with full technical equipment.",
+      "features": [
+        "Capacity up to 15 people",
+        "Video projector with screen",
+        "Sound system",
+        "Custom catering"
+      ],
+      "cta": "Write to us for a free quote",
+      "ctaHref": "#contact"
+    }
+  },
+  "gallery": {
+    "sectionId": "gallery",
+    "subtitle": "Take a peek",
+    "heading": "Gallery",
+    "imageAlt": "Café Ve Věži",
+    "instagramCta": "Follow us on Instagram",
+    "lightboxClose": "Close"
+  },
+  "contact": {
+    "sectionId": "contact",
+    "subtitle": "Find us",
+    "heading": "Contact",
+    "addressLabel": "Address",
+    "emailLabel": "Email",
+    "socialLabel": "Social media",
+    "hoursLabel": "Opening hours",
+    "mapTitle": "Map — Café Ve Věži",
+    "formLabels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    },
+    "openingHours": [
+      { "day": "Monday", "hours": "Closed", "closed": true },
+      { "day": "Tuesday – Friday", "hours": "9:00 – 18:00", "closed": false },
+      { "day": "Saturday", "hours": "9:00 – 17:00", "closed": false },
+      { "day": "Sunday", "hours": "10:00 – 16:00", "closed": false }
+    ]
+  },
+  "footer": {
+    "tagline": "Made with love in Tachov",
+    "copy": "Café Ve Věži. All rights reserved."
+  },
+  "emailButton": {
+    "ariaLabel": "Write to us",
+    "subject": "Reservation"
+  },
+  "meta": {
+    "title": "Café Ve Věži | Café in Tachov",
+    "description": "A cozy café in the historic centre of Tachov. Specialty coffee, homemade desserts, cultural events, and private celebrations. Visit us at K. H. Borovského 128.",
+    "keywords": ["café", "Tachov", "coffee", "desserts", "KineDok", "private events", "Czech Republic"],
+    "ogDescription": "A cozy café in the historic centre of Tachov. Specialty coffee, homemade desserts, and cultural events."
+  }
+}

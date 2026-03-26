@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { CAFE_INFO } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function WhatsAppButton() {
+  const dict = useDictionary();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -19,9 +22,9 @@ export default function WhatsAppButton() {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0, opacity: 0 }}
-      href={`mailto:info@cafevevezi.cz?subject=Rezervace`}
+      href={`mailto:${CAFE_INFO.email}?subject=${encodeURIComponent(dict.emailButton.subject)}`}
       className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-accent rounded-full flex items-center justify-center shadow-lg shadow-accent/20 hover:bg-accent-light hover:scale-110 transition-all duration-300"
-      aria-label="Napište nám"
+      aria-label={dict.emailButton.ariaLabel}
     >
       <svg
         className="w-6 h-6 text-bg"

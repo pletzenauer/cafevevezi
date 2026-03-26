@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import { ABOUT_TEXT, IMAGES } from "@/lib/constants";
+import { IMAGES } from "@/lib/constants";
+import { useDictionary } from "@/lib/DictionaryContext";
 
 export default function About() {
+  const dict = useDictionary();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section id="o-nas" className="relative py-24 md:py-36 overflow-hidden">
+    <section id={dict.about.sectionId} className="relative py-24 md:py-36 overflow-hidden">
       <div className="absolute inset-0 noise-overlay" />
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
@@ -22,13 +24,12 @@ export default function About() {
           >
             <Image
               src={IMAGES.about}
-              alt="Café Ve Věži interiér"
+              alt={dict.about.imageAlt}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg/40 to-transparent" />
-            {/* Decorative border */}
             <div className="absolute inset-4 border border-accent/20 pointer-events-none" />
           </motion.div>
 
@@ -39,14 +40,14 @@ export default function About() {
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="text-accent text-sm tracking-[0.3em] uppercase font-light">
-              Náš příběh
+              {dict.about.subtitle}
             </span>
             <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl lg:text-6xl font-light mt-4 mb-8 leading-tight">
-              {ABOUT_TEXT.heading}
+              {dict.about.heading}
             </h2>
             <div className="w-16 h-px bg-accent mb-8" />
 
-            {ABOUT_TEXT.paragraphs.map((p, i) => (
+            {dict.about.paragraphs.map((p, i) => (
               <p
                 key={i}
                 className="text-text-muted font-light leading-relaxed mb-6 text-base md:text-lg"
@@ -57,7 +58,7 @@ export default function About() {
 
             {/* Feature badges */}
             <div className="flex flex-wrap gap-4 mt-10">
-              {ABOUT_TEXT.features.map((feature) => (
+              {dict.about.features.map((feature) => (
                 <div
                   key={feature.label}
                   className="flex items-center gap-3 px-5 py-3 bg-bg-card border border-border rounded-sm"
