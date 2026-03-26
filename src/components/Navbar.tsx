@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useDictionary } from "@/lib/DictionaryContext";
 import { CAFE_INFO } from "@/lib/constants";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -49,30 +50,13 @@ export default function Navbar() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            {/* Castle gate logo SVG — matching original brand mark */}
-            <svg
-              width="30"
-              height="34"
-              viewBox="0 0 30 34"
-              fill="none"
-              className="text-accent"
-              aria-hidden="true"
-            >
-              {/* Three merlons (battlements) */}
-              <rect x="1" y="0" width="5" height="8" fill="currentColor" />
-              <rect x="12.5" y="0" width="5" height="8" fill="currentColor" />
-              <rect x="24" y="0" width="5" height="8" fill="currentColor" />
-              {/* Top connecting bar */}
-              <rect x="1" y="8" width="28" height="3.5" fill="currentColor" />
-              {/* Left pillar */}
-              <rect x="2" y="11.5" width="5" height="22.5" fill="currentColor" />
-              {/* Right pillar */}
-              <rect x="23" y="11.5" width="5" height="22.5" fill="currentColor" />
-              {/* Center pillar (shorter — stops at crossbar) */}
-              <rect x="12.5" y="11.5" width="5" height="11" fill="currentColor" />
-              {/* Horizontal crossbar */}
-              <rect x="7" y="18" width="16" height="3.5" fill="currentColor" />
-            </svg>
+            <Image
+              src="/images/logo-icon.jpg"
+              alt="Café Ve Věži logo"
+              width={36}
+              height={36}
+              className="rounded-sm"
+            />
             {CAFE_INFO.name}
           </a>
 
