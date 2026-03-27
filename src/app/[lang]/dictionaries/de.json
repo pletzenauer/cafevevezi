@@ -2,7 +2,7 @@
   "nav": {
     "links": [
       { "label": "Über uns", "href": "#ueber-uns" },
-      { "label": "Speisekarte", "href": "#speisekarte" },
+      { "label": "Karte", "href": "#speisekarte" },
       { "label": "Veranstaltungen", "href": "#veranstaltungen" },
       { "label": "Umbau", "href": "#umbau" },
       { "label": "Galerie", "href": "#galerie" },
