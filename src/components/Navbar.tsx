@@ -57,7 +57,6 @@ export default function Navbar() {
               height={48}
               className="rounded-sm shadow-lg shadow-black/30"
             />
-            {CAFE_INFO.name}
           </a>
 
           {/* Desktop nav */}
@@ -66,7 +65,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium tracking-widest uppercase text-text-muted hover:text-accent transition-colors duration-300"
+                className="text-sm font-bold tracking-widest uppercase text-text-muted hover:text-accent transition-colors duration-300"
               >
                 {link.label}
               </a>

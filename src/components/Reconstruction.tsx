@@ -20,7 +20,7 @@ function CompareSlider({
   afterLabel: string;
   alt: string;
 }) {
-  const [position, setPosition] = useState(50);
+  const [position, setPosition] = useState(25);
   const [dragging, setDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
