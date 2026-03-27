@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
@@ -21,27 +21,56 @@ function CompareSlider({
   alt: string;
 }) {
   const [position, setPosition] = useState(50);
+  const [dragging, setDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMove = useCallback(
-    (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      const clientX =
-        "touches" in e ? e.touches[0].clientX : e.clientX;
-      const x = ((clientX - rect.left) / rect.width) * 100;
-      setPosition(Math.max(0, Math.min(100, x)));
-    },
-    []
-  );
+  const updatePosition = useCallback((clientX: number) => {
+    const el = containerRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = ((clientX - rect.left) / rect.width) * 100;
+    setPosition(Math.max(0, Math.min(100, x)));
+  }, []);
+
+  useEffect(() => {
+    if (!dragging) return;
+
+    const onMouseMove = (e: MouseEvent) => {
+      e.preventDefault();
+      updatePosition(e.clientX);
+    };
+    const onMouseUp = () => setDragging(false);
+    const onTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+      updatePosition(e.touches[0].clientX);
+    };
+    const onTouchEnd = () => setDragging(false);
+
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
+    window.addEventListener("touchmove", onTouchMove, { passive: false });
+    window.addEventListener("touchend", onTouchEnd);
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [dragging, updatePosition]);
 
   return (
     <div
+      ref={containerRef}
       className="relative w-full aspect-[3/4] overflow-hidden cursor-col-resize select-none group"
-      onMouseMove={(e) => {
-        if (e.buttons === 1) handleMove(e);
+      onMouseDown={(e) => {
+        e.preventDefault();
+        setDragging(true);
+        updatePosition(e.clientX);
       }}
-      onMouseDown={handleMove}
-      onTouchMove={handleMove}
-      onTouchStart={handleMove}
+      onTouchStart={(e) => {
+        setDragging(true);
+        updatePosition(e.touches[0].clientX);
+      }}
     >
       {/* After image (full, background) */}
       <Image
