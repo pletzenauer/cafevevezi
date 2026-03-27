@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-20 overflow-visible">
           <a
             href="#"
-            className="relative z-10 flex items-center gap-3 font-[family-name:var(--font-josefin)] text-xl md:text-2xl font-medium uppercase tracking-widest text-text hover:text-accent transition-colors"
+            className="relative z-10 flex items-center gap-3 font-[family-name:var(--font-josefin)] text-lg md:text-xl font-medium uppercase tracking-widest text-text hover:text-accent transition-colors"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
@@ -53,8 +53,8 @@ export default function Navbar() {
             <Image
               src="/images/logo-icon.jpg"
               alt="Café Ve Věži logo"
-              width={72}
-              height={72}
+              width={48}
+              height={48}
               className="rounded-sm shadow-lg shadow-black/30"
             />
             {CAFE_INFO.name}
