@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-20 overflow-visible">
           <a
             href="#"
-            className="relative z-10 flex items-center gap-3 font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl font-light tracking-wide text-text hover:text-accent transition-colors"
+            className="relative z-10 flex items-center gap-3 font-[family-name:var(--font-josefin)] text-xl md:text-2xl font-medium uppercase tracking-widest text-text hover:text-accent transition-colors"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
@@ -66,7 +66,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-light tracking-widest uppercase text-text-muted hover:text-accent transition-colors duration-300"
+                className="text-sm font-medium tracking-widest uppercase text-text-muted hover:text-accent transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -113,7 +113,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
                   onClick={() => setMobileOpen(false)}
-                  className="font-[family-name:var(--font-cormorant)] text-3xl font-light tracking-wider text-text-muted hover:text-accent transition-colors"
+                  className="font-[family-name:var(--font-cormorant)] text-3xl font-medium tracking-wider text-text-muted hover:text-accent transition-colors"
                 >
                   {link.label}
                 </motion.a>

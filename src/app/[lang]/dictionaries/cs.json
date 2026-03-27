@@ -4,6 +4,7 @@
       { "label": "O nás", "href": "#o-nas" },
       { "label": "Nabídka", "href": "#nabidka" },
       { "label": "Akce", "href": "#akce" },
+      { "label": "Rekonstrukce", "href": "#rekonstrukce" },
       { "label": "Galerie", "href": "#galerie" },
       { "label": "Recenze", "href": "#recenze" },
       { "label": "Kontakt", "href": "#kontakt" }
@@ -94,6 +95,14 @@
       "cta": "Napište nám pro nezávaznou nabídku",
       "ctaHref": "#kontakt"
     }
+  },
+  "reconstruction": {
+    "sectionId": "rekonstrukce",
+    "subtitle": "Prom\u011bna",
+    "heading": "Rekonstrukce",
+    "beforeLabel": "P\u0159ed",
+    "afterLabel": "Po",
+    "description": "Z opu\u0161t\u011bn\u00e9ho domu \u00fatulnou kav\u00e1rnou. Pod\u00edvejte se, jak prob\u00edhala prom\u011bna na\u0161ich prostor."
   },
   "gallery": {
     "sectionId": "galerie",

@@ -30,4 +30,8 @@ export const IMAGES = {
     "/images/gallery-7.jpg",
     "/images/gallery-8.jpg",
   ],
+  reconstruction: Array.from({ length: 9 }, (_, i) => ({
+    before: `/images/reconstruction/before-${i + 1}.jpg`,
+    after: `/images/reconstruction/after-${i + 1}.jpg`,
+  })),
 };

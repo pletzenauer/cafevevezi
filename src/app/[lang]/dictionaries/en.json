@@ -4,6 +4,7 @@
       { "label": "About", "href": "#about" },
       { "label": "Menu", "href": "#menu" },
       { "label": "Events", "href": "#events" },
+      { "label": "Reconstruction", "href": "#reconstruction" },
       { "label": "Gallery", "href": "#gallery" },
       { "label": "Reviews", "href": "#reviews" },
       { "label": "Contact", "href": "#contact" }
@@ -97,6 +98,14 @@
       "cta": "Write to us for a free quote",
       "ctaHref": "#contact"
     }
+  },
+  "reconstruction": {
+    "sectionId": "reconstruction",
+    "subtitle": "Transformation",
+    "heading": "Reconstruction",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "description": "From an abandoned building to a cozy cafe. See how we transformed our space."
   },
   "gallery": {
     "sectionId": "gallery",

@@ -8,6 +8,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Menu from "@/components/Menu";
 import Events from "@/components/Events";
+import Reconstruction from "@/components/Reconstruction";
 import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
@@ -35,6 +36,7 @@ export default async function Home({
         <About />
         <Menu />
         <Events />
+        <Reconstruction />
         <Gallery />
         <Reviews />
         <Contact />

@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Cormorant_Garamond, Outfit, Josefin_Sans } from "next/font/google";
 import "../globals.css";
 import { locales, type Locale } from "@/lib/i18n";
 import { getDictionary } from "./dictionaries";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const josefin = Josefin_Sans({
+  variable: "--font-josefin",
   subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -90,7 +97,7 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${cormorant.variable} ${outfit.variable} antialiased`}
+      className={`${cormorant.variable} ${outfit.variable} ${josefin.variable} antialiased`}
     >
       <head>
         <script

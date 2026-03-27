@@ -4,6 +4,7 @@
       { "label": "Über uns", "href": "#ueber-uns" },
       { "label": "Speisekarte", "href": "#speisekarte" },
       { "label": "Veranstaltungen", "href": "#veranstaltungen" },
+      { "label": "Umbau", "href": "#umbau" },
       { "label": "Galerie", "href": "#galerie" },
       { "label": "Bewertungen", "href": "#bewertungen" },
       { "label": "Kontakt", "href": "#kontakt" }
@@ -97,6 +98,14 @@
       "cta": "Schreiben Sie uns für ein unverbindliches Angebot",
       "ctaHref": "#kontakt"
     }
+  },
+  "reconstruction": {
+    "sectionId": "umbau",
+    "subtitle": "Verwandlung",
+    "heading": "Umbau",
+    "beforeLabel": "Vorher",
+    "afterLabel": "Nachher",
+    "description": "Von einem verlassenen Geb\u00e4ude zu einem gem\u00fctlichen Caf\u00e9. Sehen Sie, wie wir unsere R\u00e4ume verwandelt haben."
   },
   "gallery": {
     "sectionId": "galerie",
