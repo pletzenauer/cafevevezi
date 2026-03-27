@@ -48,6 +48,19 @@ export default function Contact() {
               </p>
             </div>
 
+            {/* Phone */}
+            <div className="mb-10">
+              <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-light mb-4 text-accent">
+                {dict.contact.phoneLabel}
+              </h3>
+              <a
+                href={`tel:${CAFE_INFO.phone}`}
+                className="text-text-muted font-light hover:text-accent transition-colors"
+              >
+                {CAFE_INFO.phone}
+              </a>
+            </div>
+
             {/* Email */}
             <div className="mb-10">
               <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-light mb-4 text-accent">

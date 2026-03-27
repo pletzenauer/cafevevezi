@@ -1,7 +1,8 @@
 export const CAFE_INFO = {
   name: "Café Ve Věži",
   address: "K. H. Borovského 128",
-  city: "347 01 Tachov",
+  city: "347 01 Tachov 1",
+  phone: "+420 608 491 173",
   email: "info@cafevevezi.cz",
   instagram: "https://www.instagram.com/cafevevezi",
   instagramHandle: "@cafevevezi",
@@ -9,7 +10,9 @@ export const CAFE_INFO = {
   facebookHandle: "Café Ve Věži",
   website: "https://cafevevezi.cz",
   mapEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2555.0!2d12.636!3d49.795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDQ3JzQyLjAiTiAxMsKwMzgnMDkuNiJF!5e0!3m2!1scs!2scz!4v1",
+    "https://www.google.com/maps?q=Café+Ve+Věži,+K.+H.+Borovského+128,+Tachov&output=embed",
+  googleReviews:
+    "https://www.google.com/maps/place/Caf%C3%A9+Ve+V%C4%9B%C5%BEi/@49.7944662,12.6324751,17z/data=!4m8!3m7!1s0x47a071e029d953d1:0xf03635eb4117d5ed!8m2!3d49.7944662!4d12.6324751!9m1!1b1!16s%2Fg%2F11ks2tjwjr",
 };
 
 export const IMAGES = {

@@ -5,6 +5,7 @@
       { "label": "Menu", "href": "#menu" },
       { "label": "Events", "href": "#events" },
       { "label": "Gallery", "href": "#gallery" },
+      { "label": "Reviews", "href": "#reviews" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
@@ -105,11 +106,47 @@
     "instagramCta": "Follow us on Instagram",
     "lightboxClose": "Close"
   },
+  "reviews": {
+    "sectionId": "reviews",
+    "subtitle": "What our guests say",
+    "heading": "Reviews",
+    "rating": "5.0",
+    "reviewCount": "30 reviews on Google",
+    "googleCta": "Read all reviews on Google",
+    "items": [
+      {
+        "name": "Silvie Čermáková",
+        "text": "Beautiful establishment, very pleasant owner who served us with a smile 10 minutes before closing time. Great Pavlova and a really funny tip with egg cognac. Perfect atmosphere.",
+        "rating": 5
+      },
+      {
+        "name": "Petr Junior Srb",
+        "text": "Lovely lady, great coffee, desserts and canapés. Absolutely satisfied!",
+        "rating": 5
+      },
+      {
+        "name": "Ute Kohler",
+        "text": "Very nice little café with excellent coffee and cakes.",
+        "rating": 5
+      },
+      {
+        "name": "Zuzana Procházková",
+        "text": "The best cafe in Tachov. Great desserts and good coffee.",
+        "rating": 5
+      },
+      {
+        "name": "Lenka Popová",
+        "text": "A great new café with a pleasant atmosphere and friendly service. On top of that, the delicious homemade desserts that are available here.",
+        "rating": 5
+      }
+    ]
+  },
   "contact": {
     "sectionId": "contact",
     "subtitle": "Find us",
     "heading": "Contact",
     "addressLabel": "Address",
+    "phoneLabel": "Phone",
     "emailLabel": "Email",
     "socialLabel": "Social media",
     "hoursLabel": "Opening hours",
@@ -122,9 +159,12 @@
     },
     "openingHours": [
       { "day": "Monday", "hours": "Closed", "closed": true },
-      { "day": "Tuesday – Friday", "hours": "9:00 – 18:00", "closed": false },
-      { "day": "Saturday", "hours": "9:00 – 17:00", "closed": false },
-      { "day": "Sunday", "hours": "10:00 – 16:00", "closed": false }
+      { "day": "Tuesday", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Wednesday", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Thursday", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Friday", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Saturday", "hours": "Closed", "closed": true },
+      { "day": "Sunday", "hours": "Closed", "closed": true }
     ]
   },
   "footer": {

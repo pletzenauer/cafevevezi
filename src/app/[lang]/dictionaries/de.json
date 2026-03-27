@@ -5,6 +5,7 @@
       { "label": "Speisekarte", "href": "#speisekarte" },
       { "label": "Veranstaltungen", "href": "#veranstaltungen" },
       { "label": "Galerie", "href": "#galerie" },
+      { "label": "Bewertungen", "href": "#bewertungen" },
       { "label": "Kontakt", "href": "#kontakt" }
     ]
   },
@@ -105,11 +106,47 @@
     "instagramCta": "Folgen Sie uns auf Instagram",
     "lightboxClose": "Schließen"
   },
+  "reviews": {
+    "sectionId": "bewertungen",
+    "subtitle": "Was unsere Gäste sagen",
+    "heading": "Bewertungen",
+    "rating": "5.0",
+    "reviewCount": "30 Bewertungen auf Google",
+    "googleCta": "Alle Bewertungen auf Google lesen",
+    "items": [
+      {
+        "name": "Silvie Čermáková",
+        "text": "Wunderschönes Lokal, sehr freundliche Besitzerin, die uns mit einem Lächeln 10 Minuten vor Ladenschluss bedient hat. Tolle Pavlova und ein wirklich lustiger Tipp mit Eierlikör. Perfekte Atmosphäre.",
+        "rating": 5
+      },
+      {
+        "name": "Petr Junior Srb",
+        "text": "Nette Dame, toller Kaffee, Desserts und Häppchen. Absolut zufrieden!",
+        "rating": 5
+      },
+      {
+        "name": "Ute Kohler",
+        "text": "Sehr nettes kleines Café mit ausgezeichnetem Kaffee und Kuchen.",
+        "rating": 5
+      },
+      {
+        "name": "Zuzana Procházková",
+        "text": "Das beste Café in Tachov. Tolle Desserts und guter Kaffee.",
+        "rating": 5
+      },
+      {
+        "name": "Lenka Popová",
+        "text": "Ein tolles neues Café mit angenehmer Atmosphäre und freundlichem Service. Dazu die köstlichen hausgemachten Desserts, die es hier gibt.",
+        "rating": 5
+      }
+    ]
+  },
   "contact": {
     "sectionId": "kontakt",
     "subtitle": "So finden Sie uns",
     "heading": "Kontakt",
     "addressLabel": "Adresse",
+    "phoneLabel": "Telefon",
     "emailLabel": "E-Mail",
     "socialLabel": "Soziale Netzwerke",
     "hoursLabel": "Öffnungszeiten",
@@ -122,9 +159,12 @@
     },
     "openingHours": [
       { "day": "Montag", "hours": "Geschlossen", "closed": true },
-      { "day": "Dienstag – Freitag", "hours": "9:00 – 18:00", "closed": false },
-      { "day": "Samstag", "hours": "9:00 – 17:00", "closed": false },
-      { "day": "Sonntag", "hours": "10:00 – 16:00", "closed": false }
+      { "day": "Dienstag", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Mittwoch", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Donnerstag", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Freitag", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Samstag", "hours": "Geschlossen", "closed": true },
+      { "day": "Sonntag", "hours": "Geschlossen", "closed": true }
     ]
   },
   "footer": {

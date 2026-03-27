@@ -35,16 +35,16 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 overflow-visible transition-all duration-500 ${
           scrolled
             ? "bg-bg/90 backdrop-blur-xl border-b border-border"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-20 overflow-visible">
           <a
             href="#"
-            className="flex items-center gap-2 font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl font-light tracking-wide text-text hover:text-accent transition-colors"
+            className="relative z-10 flex items-center gap-3 font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl font-light tracking-wide text-text hover:text-accent transition-colors"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
@@ -53,9 +53,9 @@ export default function Navbar() {
             <Image
               src="/images/logo-icon.jpg"
               alt="Café Ve Věži logo"
-              width={36}
-              height={36}
-              className="rounded-sm"
+              width={72}
+              height={72}
+              className="rounded-sm shadow-lg shadow-black/30"
             />
             {CAFE_INFO.name}
           </a>

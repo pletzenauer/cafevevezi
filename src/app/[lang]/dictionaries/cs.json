@@ -5,6 +5,7 @@
       { "label": "Nabídka", "href": "#nabidka" },
       { "label": "Akce", "href": "#akce" },
       { "label": "Galerie", "href": "#galerie" },
+      { "label": "Recenze", "href": "#recenze" },
       { "label": "Kontakt", "href": "#kontakt" }
     ]
   },
@@ -102,11 +103,47 @@
     "instagramCta": "Sledujte nás na Instagramu",
     "lightboxClose": "Zavřít"
   },
+  "reviews": {
+    "sectionId": "recenze",
+    "subtitle": "Co říkají naši hosté",
+    "heading": "Recenze",
+    "rating": "5.0",
+    "reviewCount": "30 recenzí na Googlu",
+    "googleCta": "Přečíst všechny recenze na Googlu",
+    "items": [
+      {
+        "name": "Silvie Čermáková",
+        "text": "Krásný podnik, velmi příjemná majitelka, která nás obsloužila s úsměvem 10 minut před zavírací dobou. Skvělá Pavlova a opravdu vtipný tip s vaječňákem. Perfektní atmosféra.",
+        "rating": 5
+      },
+      {
+        "name": "Petr Junior Srb",
+        "text": "Milá paní, skvělá káva, dezerty a jednohubky. Naprosto spokojený!",
+        "rating": 5
+      },
+      {
+        "name": "Ute Kohler",
+        "text": "Velmi pěkná malá kavárna s vynikající kávou a zákusky.",
+        "rating": 5
+      },
+      {
+        "name": "Zuzana Procházková",
+        "text": "Nejlepší kavárna v Tachově. Skvělé dezerty a dobrá káva.",
+        "rating": 5
+      },
+      {
+        "name": "Lenka Popová",
+        "text": "Skvělá nová kavárna s příjemnou atmosférou a milou obsluhou. K tomu bych ráda přidala vynikající domácí dezerty, které tu mají.",
+        "rating": 5
+      }
+    ]
+  },
   "contact": {
     "sectionId": "kontakt",
     "subtitle": "Najdete nás",
     "heading": "Kontakt",
     "addressLabel": "Adresa",
+    "phoneLabel": "Telefon",
     "emailLabel": "E-mail",
     "socialLabel": "Sociální sítě",
     "hoursLabel": "Otevírací doba",
@@ -119,9 +156,12 @@
     },
     "openingHours": [
       { "day": "Pondělí", "hours": "Zavřeno", "closed": true },
-      { "day": "Úterý – Pátek", "hours": "9:00 – 18:00", "closed": false },
-      { "day": "Sobota", "hours": "9:00 – 17:00", "closed": false },
-      { "day": "Neděle", "hours": "10:00 – 16:00", "closed": false }
+      { "day": "Úterý", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Středa", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Čtvrtek", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Pátek", "hours": "09:00 – 17:00", "closed": false },
+      { "day": "Sobota", "hours": "Zavřeno", "closed": true },
+      { "day": "Neděle", "hours": "Zavřeno", "closed": true }
     ]
   },
   "footer": {
