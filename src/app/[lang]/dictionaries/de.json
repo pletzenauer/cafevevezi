@@ -16,7 +16,12 @@
     "ctaMenu": "Speisekarte entdecken",
     "ctaMenuHref": "#speisekarte",
     "ctaReserve": "Reservierung",
-    "ctaReserveHref": "#kontakt"
+    "ctaReserveHref": "#kontakt",
+    "translationHint": "Was bedeutet Ve Věži?",
+    "translations": [
+      { "flag": "🇨🇿", "text": "Kavárna ve věži" },
+      { "flag": "🇬🇧", "text": "Café in the Tower" }
+    ]
   },
   "about": {
     "sectionId": "ueber-uns",

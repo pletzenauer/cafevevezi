@@ -21,23 +21,22 @@ export const IMAGES = {
   events: "/images/events.jpg",
   logo: "/images/logo-source.jpg",
   gallery: [
-    "/images/gallery-1.jpg",
-    "/images/gallery-2.jpg",
-    "/images/gallery-3.jpg",
-    "/images/gallery-4.jpg",
-    "/images/gallery-5.jpg",
-    "/images/gallery-6.jpg",
-    "/images/gallery-7.jpg",
-    "/images/gallery-8.jpg",
-    "/images/gallery-9.jpg",
-    "/images/gallery-10.jpg",
-    "/images/gallery-11.jpg",
-    "/images/gallery-12.jpg",
-    "/images/gallery-13.jpg",
-    "/images/gallery-14.jpg",
+    "/images/gallery-4.jpg",   // cheesecake
+    "/images/gallery-9.jpg",   // interior orange walls
+    "/images/gallery-2.jpg",   // pink cakes
+    "/images/gallery-10.jpg",  // stairs
+    "/images/gallery-1.jpg",   // bruschetta
+    "/images/gallery-11.jpg",  // seating area
+    "/images/gallery-6.jpg",   // tarts
+    "/images/gallery-14.jpg",  // window detail
+    "/images/gallery-3.jpg",   // pavlova
+    "/images/gallery-12.jpg",  // Aperol terrace
+    "/images/gallery-5.jpg",   // poppy cheesecake
+    "/images/gallery-7.jpg",   // matcha latte
+    "/images/gallery-8.jpg",   // pavlova close-up
   ],
-  reconstruction: Array.from({ length: 9 }, (_, i) => ({
-    before: `/images/reconstruction/before-${i + 1}.jpg`,
-    after: `/images/reconstruction/after-${i + 1}.jpg`,
+  reconstruction: [1, 2, 4, 5, 7, 8].map((n) => ({
+    before: `/images/reconstruction/before-${n}.jpg`,
+    after: `/images/reconstruction/after-${n}.jpg`,
   })),
 };

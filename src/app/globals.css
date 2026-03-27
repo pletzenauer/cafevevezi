@@ -78,3 +78,13 @@ body {
   box-shadow: 0 0 60px rgba(200, 168, 78, 0.15),
     0 0 120px rgba(200, 168, 78, 0.05);
 }
+
+/* Subtle pulse glow for translation whisper icon */
+@keyframes whisper-pulse {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(200, 168, 78, 0.3)); }
+  50% { filter: drop-shadow(0 0 8px rgba(200, 168, 78, 0.6)); }
+}
+.whisper-pulse {
+  animation: whisper-pulse 3s ease-in-out infinite;
+  animation-delay: 2s;
+}

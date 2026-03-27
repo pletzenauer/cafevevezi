@@ -16,7 +16,12 @@
     "ctaMenu": "Explore the menu",
     "ctaMenuHref": "#menu",
     "ctaReserve": "Reservation",
-    "ctaReserveHref": "#contact"
+    "ctaReserveHref": "#contact",
+    "translationHint": "What does Ve Věži mean?",
+    "translations": [
+      { "flag": "🇨🇿", "text": "Kavárna ve věži" },
+      { "flag": "🇩🇪", "text": "Café im Turm" }
+    ]
   },
   "about": {
     "sectionId": "about",

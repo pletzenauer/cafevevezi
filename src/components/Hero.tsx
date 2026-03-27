@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { CAFE_INFO, IMAGES } from "@/lib/constants";
 import { useDictionary } from "@/lib/DictionaryContext";
@@ -9,6 +9,7 @@ import { useDictionary } from "@/lib/DictionaryContext";
 export default function Hero() {
   const dict = useDictionary();
   const ref = useRef<HTMLDivElement>(null);
+  const [showTranslation, setShowTranslation] = useState(false);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -30,8 +31,12 @@ export default function Hero() {
         />
       </motion.div>
 
+      {/* Dark top-left fade to hide watermark and improve nav readability */}
+      <div className="absolute inset-x-0 top-0 h-[40%]" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, transparent 100%)' }} />
+      <div className="absolute top-0 left-0 w-[40%] h-[60%] md:hidden" style={{ background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 40%, transparent 100%)' }} />
+
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-bg" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-bg" />
 
       {/* Noise texture */}
       <div className="absolute inset-0 noise-overlay" />
@@ -63,6 +68,82 @@ export default function Hero() {
             height={654}
             className="w-72 sm:w-80 md:w-96 lg:w-[480px] h-auto"
           />
+        </motion.div>
+
+        {/* Translation Whisper */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="relative"
+        >
+          <button
+            onClick={(e) => { e.stopPropagation(); setShowTranslation((v) => !v); }}
+            className="relative z-50 whisper-pulse flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent/20 bg-accent/5 hover:bg-accent/10 transition-colors cursor-pointer group"
+            aria-label={dict.hero.translationHint}
+          >
+            {/* Tower icon SVG */}
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="text-accent"
+            >
+              <path
+                d="M12 2L9 5V8H7V5L4 2H2V22H10V17C10 15.9 10.9 15 12 15C13.1 15 14 15.9 14 17V22H22V2H20L17 5V8H15V5L12 2Z"
+                fill="currentColor"
+                opacity="0.8"
+              />
+            </svg>
+            <span className="text-xs tracking-wider text-accent/70 group-hover:text-accent transition-colors">
+              ?
+            </span>
+          </button>
+
+          <AnimatePresence>
+            {showTranslation && (
+              <>
+                {/* Backdrop to close on click outside */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+                  style={{ zIndex: 9998 }}
+                  onClick={() => setShowTranslation(false)}
+                />
+                {/* Tooltip bubble — fixed center to avoid overflow-hidden clipping */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.25 }}
+                  className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-bg-card border border-accent/40 rounded-2xl px-8 py-6 shadow-2xl shadow-accent/10 min-w-[260px]"
+                  style={{ zIndex: 9999 }}
+                >
+                  <p className="text-sm text-accent mb-4 text-center font-semibold tracking-wide font-serif">
+                    {dict.hero.translationHint}
+                  </p>
+                  <div className="space-y-3">
+                    {dict.hero.translations.map(
+                      (t: { flag: string; text: string }, i: number) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-3"
+                        >
+                          <span className="text-xl">{t.flag}</span>
+                          <span className="italic font-serif text-lg text-text/90">
+                            {t.text}
+                          </span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
         </motion.div>
 
         <motion.div
