@@ -24,11 +24,14 @@ export default function Hero() {
           src={IMAGES.hero}
           alt={dict.hero.imageAlt}
           fill
-          className="object-cover"
+          className="object-cover object-[75%_50%]"
           priority
           sizes="100vw"
         />
       </motion.div>
+
+      {/* Corner overlay to hide watermark */}
+      <div className="absolute top-0 left-0 w-[40%] h-[50%]" style={{ background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.95) 60%, transparent 100%)' }} />
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-bg" />
@@ -49,27 +52,34 @@ export default function Hero() {
           className="vertical-line h-16 mb-8 origin-top"
         />
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="font-[family-name:var(--font-cormorant)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-wide text-text"
+        {/* Logo with text */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-8"
         >
-          {CAFE_INFO.name}
-        </motion.h1>
+          <Image
+            src="/images/logo-main.png"
+            alt="Café Ve Věži Logo"
+            width={861}
+            height={654}
+            className="w-72 sm:w-80 md:w-96 lg:w-[480px] h-auto"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="w-24 h-px bg-accent my-6"
+          className="w-24 h-px bg-accent my-4"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-lg md:text-xl font-light tracking-[0.3em] uppercase text-text-muted"
+          className="text-lg md:text-xl font-medium tracking-[0.3em] uppercase text-text-muted"
         >
           {dict.hero.tagline}
         </motion.p>
