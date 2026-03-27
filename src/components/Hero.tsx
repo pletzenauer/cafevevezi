@@ -24,14 +24,11 @@ export default function Hero() {
           src={IMAGES.hero}
           alt={dict.hero.imageAlt}
           fill
-          className="object-cover object-[75%_50%]"
+          className="object-cover"
           priority
           sizes="100vw"
         />
       </motion.div>
-
-      {/* Corner overlay to hide watermark */}
-      <div className="absolute top-0 left-0 w-[40%] h-[50%]" style={{ background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.95) 60%, transparent 100%)' }} />
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-bg" />
@@ -79,7 +76,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="text-lg md:text-xl font-medium tracking-[0.3em] uppercase text-text-muted"
+          className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-[0.3em] uppercase text-text"
         >
           {dict.hero.tagline}
         </motion.p>
