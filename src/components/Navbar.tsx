@@ -41,7 +41,7 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-20 overflow-visible">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-20 overflow-visible relative">
           <a
             href="#"
             className="relative z-10 flex items-center gap-3 font-[family-name:var(--font-josefin)] text-lg md:text-xl font-medium uppercase tracking-widest text-text hover:text-accent transition-colors"
@@ -60,16 +60,20 @@ export default function Navbar() {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             {dict.nav.links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-base font-bold tracking-widest uppercase text-text hover:text-accent transition-colors duration-300"
+                className="text-xs font-medium tracking-widest uppercase text-text-muted hover:text-accent transition-colors duration-300"
               >
                 {link.label}
               </a>
             ))}
+          </div>
+
+          {/* Language switcher - right aligned */}
+          <div className="hidden md:flex">
             <LanguageSwitcher />
           </div>
 

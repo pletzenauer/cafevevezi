@@ -79,13 +79,13 @@ export default function Hero() {
         >
           <button
             onClick={(e) => { e.stopPropagation(); setShowTranslation((v) => !v); }}
-            className="relative z-50 whisper-pulse flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent/20 bg-accent/5 hover:bg-accent/10 transition-colors cursor-pointer group"
+            className="relative z-50 whisper-pulse flex items-center gap-3 px-5 py-2.5 rounded-full border border-accent/20 bg-accent/5 hover:bg-accent/10 transition-colors cursor-pointer group"
             aria-label={dict.hero.translationHint}
           >
             {/* Tower icon SVG */}
             <svg
-              width="16"
-              height="16"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               className="text-accent"
@@ -96,7 +96,7 @@ export default function Hero() {
                 opacity="0.8"
               />
             </svg>
-            <span className="text-xs tracking-wider text-accent/70 group-hover:text-accent transition-colors">
+            <span className="text-lg font-semibold tracking-wider text-accent/70 group-hover:text-accent transition-colors">
               ?
             </span>
           </button>

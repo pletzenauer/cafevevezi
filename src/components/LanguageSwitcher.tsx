@@ -22,16 +22,16 @@ export default function LanguageSwitcher() {
         <span key={lang.code} className="flex items-center gap-2">
           <a
             href={getLocalePath(lang.code)}
-            className={`text-lg font-bold tracking-widest uppercase transition-all duration-300 px-1.5 py-0.5 rounded ${
+            className={`text-xs font-medium tracking-widest uppercase transition-all duration-300 ${
               locale === lang.code
-                ? "text-accent lang-glow"
-                : "text-text hover:text-accent hover:scale-110"
+                ? "text-accent"
+                : "text-text-muted hover:text-accent"
             }`}
           >
             {lang.label}
           </a>
           {i < languages.length - 1 && (
-            <span className="text-accent/30 text-lg font-light">/</span>
+            <span className="text-text-dim text-xs">|</span>
           )}
         </span>
       ))}

@@ -18,7 +18,7 @@ export default function Footer() {
               alt="Café Ve Věži Logo"
               width={861}
               height={654}
-              className="w-40 h-auto brightness-0 invert mx-auto md:mx-0"
+              className="w-40 h-auto mx-auto md:mx-0"
             />
             <p className="text-text-dim text-xs mt-2">{dict.footer.tagline}</p>
           </div>
