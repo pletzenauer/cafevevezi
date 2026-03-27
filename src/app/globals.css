@@ -88,3 +88,12 @@ body {
   animation: whisper-pulse 3s ease-in-out infinite;
   animation-delay: 2s;
 }
+
+/* Language switcher active glow */
+@keyframes lang-glow {
+  0%, 100% { text-shadow: 0 0 4px rgba(200, 168, 78, 0.4), 0 0 12px rgba(200, 168, 78, 0.15); }
+  50% { text-shadow: 0 0 8px rgba(200, 168, 78, 0.7), 0 0 20px rgba(200, 168, 78, 0.3); }
+}
+.lang-glow {
+  animation: lang-glow 2.5s ease-in-out infinite;
+}

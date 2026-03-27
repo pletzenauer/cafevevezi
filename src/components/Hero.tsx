@@ -115,31 +115,36 @@ export default function Hero() {
                 />
                 {/* Tooltip bubble — fixed center to avoid overflow-hidden clipping */}
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.25 }}
-                  className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-bg-card border border-accent/40 rounded-2xl px-8 py-6 shadow-2xl shadow-accent/10 min-w-[260px]"
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, y: 10 }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-bg backdrop-blur-xl border border-accent/20 px-10 py-8 shadow-2xl shadow-black/60 min-w-[280px]"
                   style={{ zIndex: 9999 }}
                 >
-                  <p className="text-sm text-accent mb-4 text-center font-semibold tracking-wide font-serif">
+                  {/* Decorative top line */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
+
+                  <p className="text-xs text-accent/70 mb-6 text-center font-medium tracking-[0.25em] uppercase">
                     {dict.hero.translationHint}
                   </p>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {dict.hero.translations.map(
                       (t: { flag: string; text: string }, i: number) => (
                         <div
                           key={i}
-                          className="flex items-center gap-3"
+                          className="flex items-center justify-center"
                         >
-                          <span className="text-xl">{t.flag}</span>
-                          <span className="italic font-serif text-lg text-text/90">
+                          <span className="italic font-serif text-xl tracking-wide text-text/90">
                             {t.text}
                           </span>
                         </div>
                       )
                     )}
                   </div>
+
+                  {/* Decorative bottom line */}
+                  <div className="mt-6 w-8 h-px bg-accent/30 mx-auto" />
                 </motion.div>
               </>
             )}

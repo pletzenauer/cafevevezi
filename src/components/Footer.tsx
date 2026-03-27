@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CAFE_INFO } from "@/lib/constants";
 import { useDictionary } from "@/lib/DictionaryContext";
 
@@ -12,10 +13,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <div className="text-center md:text-left">
-            <span className="font-[family-name:var(--font-cormorant)] text-2xl font-light text-text">
-              {CAFE_INFO.name}
-            </span>
-            <p className="text-text-dim text-xs mt-1">{dict.footer.tagline}</p>
+            <Image
+              src="/images/logo-main.png"
+              alt="Café Ve Věži Logo"
+              width={861}
+              height={654}
+              className="w-40 h-auto brightness-0 invert mx-auto md:mx-0"
+            />
+            <p className="text-text-dim text-xs mt-2">{dict.footer.tagline}</p>
           </div>
 
           {/* Nav links */}

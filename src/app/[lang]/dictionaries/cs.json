@@ -19,6 +19,7 @@
     "ctaReserveHref": "#kontakt",
     "translationHint": "Co znamená Ve Věži?",
     "translations": [
+      { "flag": "🇨🇿", "text": "Kavárna ve věži" },
       { "flag": "🇬🇧", "text": "Café in the Tower" },
       { "flag": "🇩🇪", "text": "Café im Turm" }
     ]

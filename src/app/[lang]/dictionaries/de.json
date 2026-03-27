@@ -2,7 +2,7 @@
   "nav": {
     "links": [
       { "label": "Über uns", "href": "#ueber-uns" },
-      { "label": "Karte", "href": "#speisekarte" },
+      { "label": "Menü", "href": "#speisekarte" },
       { "label": "Veranstaltungen", "href": "#veranstaltungen" },
       { "label": "Umbau", "href": "#umbau" },
       { "label": "Galerie", "href": "#galerie" },
@@ -19,8 +19,9 @@
     "ctaReserveHref": "#kontakt",
     "translationHint": "Was bedeutet Ve Věži?",
     "translations": [
-      { "flag": "🇨🇿", "text": "Kavárna ve věži" },
-      { "flag": "🇬🇧", "text": "Café in the Tower" }
+      { "flag": "🇩🇪", "text": "Café im Turm" },
+      { "flag": "🇬🇧", "text": "Café in the Tower" },
+      { "flag": "🇨🇿", "text": "Kavárna ve věži" }
     ]
   },
   "about": {
