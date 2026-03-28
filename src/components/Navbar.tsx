@@ -60,12 +60,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
             {dict.nav.links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-xs font-medium tracking-widest uppercase text-text-muted hover:text-accent transition-colors duration-300"
+                className="text-xs font-medium tracking-widest uppercase text-text-muted hover:text-accent transition-colors duration-300 whitespace-nowrap"
               >
                 {link.label}
               </a>
