@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { CAFE_INFO } from "@/lib/constants";
@@ -8,6 +9,31 @@ import { useDictionary } from "@/lib/DictionaryContext";
 export default function Contact() {
   const dict = useDictionary();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [hp, setHp] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!name.trim() || !email.trim() || !message.trim()) return;
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message, _hp: hp }),
+      });
+      if (!res.ok) throw new Error();
+      setStatus("sent");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <section id={dict.contact.sectionId} className="relative py-24 md:py-36">
@@ -141,15 +167,29 @@ export default function Contact() {
 
             {/* Contact form */}
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
               className="bg-bg-card border border-border p-8 space-y-5"
             >
+              {/* Honeypot — hidden from humans */}
+              <input
+                type="text"
+                name="_hp"
+                value={hp}
+                onChange={(e) => setHp(e.target.value)}
+                autoComplete="off"
+                tabIndex={-1}
+                aria-hidden="true"
+                className="absolute opacity-0 h-0 w-0 pointer-events-none"
+              />
               <div>
                 <label className="text-sm text-text-muted font-light tracking-wide block mb-2">
                   {dict.contact.formLabels.name}
                 </label>
                 <input
                   type="text"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full bg-transparent border-b border-border py-2 text-text font-light focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
@@ -159,6 +199,9 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-transparent border-b border-border py-2 text-text font-light focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
@@ -168,15 +211,34 @@ export default function Contact() {
                 </label>
                 <textarea
                   rows={4}
+                  required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="w-full bg-transparent border-b border-border py-2 text-text font-light focus:outline-none focus:border-accent transition-colors resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-3.5 bg-accent text-bg text-sm font-medium tracking-widest uppercase hover:bg-accent-light transition-colors duration-300"
+                disabled={status === "sending"}
+                className="w-full px-8 py-3.5 bg-accent text-bg text-sm font-medium tracking-widest uppercase hover:bg-accent-light transition-colors duration-300 disabled:opacity-50"
               >
-                {dict.contact.formLabels.send}
+                {status === "sending"
+                  ? dict.contact.formLabels.sending
+                  : dict.contact.formLabels.send}
               </button>
+              {status === "sent" && (
+                <p className="text-center text-green-400 text-sm font-light">
+                  {dict.contact.formLabels.success}
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-center text-red-400 text-sm font-light">
+                  {dict.contact.formLabels.error}
+                </p>
+              )}
+              <p className="text-center text-text-dim text-xs font-light">
+                {CAFE_INFO.email}
+              </p>
             </form>
           </motion.div>
         </div>

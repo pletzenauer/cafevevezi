@@ -167,7 +167,10 @@
       "name": "Jméno",
       "email": "E-mail",
       "message": "Zpráva",
-      "send": "Odeslat"
+      "send": "Odeslat",
+      "sending": "Odesílání...",
+      "success": "Zpráva byla odeslána!",
+      "error": "Něco se pokazilo, zkuste to znovu."
     },
     "openingHours": [
       { "day": "Pondělí", "hours": "Zavřeno", "closed": true },

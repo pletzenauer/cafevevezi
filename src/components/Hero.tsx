@@ -5,9 +5,11 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import { CAFE_INFO, IMAGES } from "@/lib/constants";
 import { useDictionary } from "@/lib/DictionaryContext";
+import { useLocale } from "@/lib/LocaleContext";
 
 export default function Hero() {
   const dict = useDictionary();
+  const locale = useLocale();
   const ref = useRef<HTMLDivElement>(null);
   const [showTranslation, setShowTranslation] = useState(false);
   const { scrollYProgress } = useScroll({
@@ -70,8 +72,8 @@ export default function Hero() {
           />
         </motion.div>
 
-        {/* Translation Whisper */}
-        <motion.div
+        {/* Translation Whisper — hidden on Czech version */}
+        {locale !== "cs" && <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.2 }}
@@ -149,7 +151,7 @@ export default function Hero() {
               </>
             )}
           </AnimatePresence>
-        </motion.div>
+        </motion.div>}
 
         <motion.div
           initial={{ scaleX: 0 }}
